@@ -13,7 +13,6 @@ const formData = reactive({
 const $form = document.getElementById('loginForm');
 
 // Fetch 
-
 const { execute } = useFetch('/api/login', { method: 'POST' }, { immediate: false })
 
 
@@ -21,7 +20,7 @@ const onSubmit = () => {
   execute();
   try {
     console.log('Submitted');
-    notificationStore.raiseNotification('Nice tits', 'success')
+    notificationStore.raiseNotification({ title: 'Oleol', message: "Omemememm", type: 'ERROR' });
   } catch (err) {
     console.log(err);
   }
